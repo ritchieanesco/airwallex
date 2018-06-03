@@ -9,7 +9,7 @@ const styles = theme => ({
   },
   paper: {
     position: "absolute",
-    width: theme.spacing.unit * 50,
+    width: "280px",
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
@@ -26,7 +26,7 @@ const InviteModal = props => {
       aria-labelledby="invite-modal-title"
       aria-describedby="invite-modal-description"
       open={props.open}
-      onClose={props.handleClose}
+      onClose={props.onClose}
     >
       <div className={classes.paper}>{props.children}</div>
     </Modal>

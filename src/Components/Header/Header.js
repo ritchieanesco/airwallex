@@ -18,7 +18,6 @@ const styles = theme => ({
     color: "#4caf50"
   },
   company: {
-    fontFamily: "Arial",
     fontSize: "16px",
     fontWeight: "800",
     marginLeft: "8px"

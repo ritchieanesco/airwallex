@@ -9,7 +9,7 @@
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
     "react-test-renderer": "^16.4.0",
-    "typeface-abeezee": "^0.0.54"
+    "typeface-nunito": "^0.0.54"
   },
   "scripts": {
     "start": "react-scripts start",

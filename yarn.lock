@@ -6917,9 +6917,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typeface-abeezee@^0.0.54:
+typeface-nunito@^0.0.54:
   version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-abeezee/-/typeface-abeezee-0.0.54.tgz#010b2da70b3394bf132b4ed4897a61d52fbff16d"
+  resolved "https://registry.yarnpkg.com/typeface-nunito/-/typeface-nunito-0.0.54.tgz#5046f24d8d1492ca8fd823896d6e1cdefbe63203"
 
 ua-parser-js@^0.7.9:
   version "0.7.18"

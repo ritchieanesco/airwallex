@@ -13,7 +13,12 @@ const styles = theme => ({
   },
   content: {
     textAlign: "center",
-    padding: "12px"
+    padding: "24px 0",
+    background: "linear-gradient(to bottom, #689f38 0%,#33691e 100%);"
+  },
+  hero: {
+    maxWidth: "960px",
+    margin: "0 auto"
   },
   button: {
     marginTop: "24px"
@@ -69,18 +74,18 @@ class App extends Component {
   handleSubmit = fields => {
     const errors = this.validateFields(fields);
     this.setState({ errors }, () => {
+      const { name, email, confirmEmail } = this.state.errors;
+      if (name || email || confirmEmail) {
+        return;
+      }
       this.send();
     });
   };
 
   send() {
-    const { name, email, confirmEmail } = this.state.errors;
-    if (name || email || confirmEmail) {
-      return;
-    }
     this.handleSend();
-    const { name: nameVal, email: emailVal } = this.state.fields;
-    sendForm(nameVal, emailVal)
+    const { name, email } = this.state.fields;
+    sendForm(name, email)
       .then(response => {
         this.handleSuccess();
       })
@@ -106,10 +111,18 @@ class App extends Component {
       <Fragment>
         <Header />
         <div className={classes.content}>
-          <Grid container alignItems="center" justify="center" spacing={24}>
+          <Grid
+            container
+            className={classes.hero}
+            alignItems="center"
+            justify="center"
+            spacing={24}
+          >
             <Grid item xs={8}>
               <Text variant="display3">A better way to enjoy every day</Text>
-              <Text variant="title">Be the first to know when we launch</Text>
+              <Text variant="display1">
+                Be the first to know when we launch
+              </Text>
               <Button
                 onClick={this.handleOpen}
                 variant="raised"

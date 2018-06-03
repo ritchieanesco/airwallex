@@ -5,12 +5,16 @@ exports[`Footer should render correctly 1`] = `
   className="Footer-footer-1"
 >
   <div
-    className="MuiGrid-container-2 MuiGrid-spacing-xs-24-25 MuiGrid-justify-xs-center-19"
+    className="MuiGrid-container-3 MuiGrid-spacing-xs-24-26 MuiGrid-justify-xs-center-20"
   >
     <div
-      className="MuiGrid-item-3 MuiGrid-grid-xs-11-39"
+      className="MuiGrid-item-4 MuiGrid-grid-xs-11-40"
     >
-      © 2018 Broccoli & Co
+      <p
+        className="MuiTypography-root-94 MuiTypography-body1-103 MuiTypography-colorInherit-113 Footer-copyright-2"
+      >
+        © 2018 Broccoli & Co
+      </p>
     </div>
   </div>
 </footer>

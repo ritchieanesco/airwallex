@@ -1,18 +1,16 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 import { object } from "prop-types";
 
 const styles = {
   footer: {
     flexGrow: 1,
-    padding: "12px 0",
-    fontSize: "12px",
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    width: "100%",
-    fontFamily: "Arial"
+    padding: "12px 0"
+  },
+  copyright: {
+    fontSize: "12px"
   }
 };
 
@@ -22,7 +20,13 @@ const Footer = props => {
     <footer className={classes.footer}>
       <Grid container justify="center" spacing={24}>
         <Grid item xs={11}>
-          &copy; 2018 Broccoli & Co
+          <Typography
+            className={classes.copyright}
+            variant="body1"
+            color="inherit"
+          >
+            &copy; 2018 Broccoli & Co
+          </Typography>
         </Grid>
       </Grid>
     </footer>

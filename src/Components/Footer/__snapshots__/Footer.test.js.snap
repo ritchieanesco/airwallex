@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render correctly 1`] = `
+<footer
+  className="Footer-footer-1"
+>
+  <div
+    className="MuiGrid-container-2 MuiGrid-spacing-xs-24-25 MuiGrid-justify-xs-center-19"
+  >
+    <div
+      className="MuiGrid-item-3 MuiGrid-grid-xs-11-39"
+    >
+      © 2018 Broccoli & Co
+    </div>
+  </div>
+</footer>
+`;

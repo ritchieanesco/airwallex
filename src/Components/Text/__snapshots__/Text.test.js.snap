@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render correctly 1`] = `
+<h1
+  className="MuiTypography-root-1 MuiTypography-display3-3 MuiTypography-gutterBottom-18"
+>
+  A better way to enjoy every day
+</h1>
+`;

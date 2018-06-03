@@ -2,6 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import { object } from "prop-types";
 import logo from "./logo.svg";
 
 const styles = theme => ({
@@ -43,6 +44,10 @@ const Header = props => {
       </Grid>
     </header>
   );
+};
+
+Header.propTypes = {
+  classes: object
 };
 
 export default withStyles(styles)(Header);

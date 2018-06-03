@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InviteForm should render correctly 1`] = `
+Array [
+  <h2
+    className="MuiTypography-root-3 MuiTypography-title-9 MuiTypography-gutterBottom-20"
+>
+    Request an Invite
+</h2>,
+  <form
+    onSubmit={[Function]}
+>
+    <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-27 MuiFormControl-marginNormal-28 MuiFormControl-fullWidth-30"
+        onBlur={[Function]}
+        onFocus={[Function]}
+    >
+        <label
+            className="MuiFormLabel-root-36 MuiInputLabel-root-31 MuiInputLabel-formControl-32 MuiInputLabel-animated-35 MuiInputLabel-shrink-34"
+            data-shrink={true}
+            htmlFor="name"
+        >
+            Name
+        </label>
+        <div
+            className="MuiInput-root-41 MuiInput-fullWidth-48 MuiInput-formControl-42 MuiInput-underline-45"
+        >
+            <input
+                aria-invalid={false}
+                aria-required={false}
+                autoComplete={undefined}
+                autoFocus={undefined}
+                className="MuiInput-input-49"
+                defaultValue={undefined}
+                disabled={false}
+                id="name"
+                name="name"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder="Name"
+                readOnly={undefined}
+                required={undefined}
+                rows={undefined}
+                type="text"
+                value=""
+            />
+        </div>
+    </div>
+    <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-27 MuiFormControl-marginNormal-28 MuiFormControl-fullWidth-30"
+        onBlur={[Function]}
+        onFocus={[Function]}
+    >
+        <label
+            className="MuiFormLabel-root-36 MuiInputLabel-root-31 MuiInputLabel-formControl-32 MuiInputLabel-animated-35 MuiInputLabel-shrink-34"
+            data-shrink={true}
+            htmlFor="email"
+        >
+            Email
+        </label>
+        <div
+            className="MuiInput-root-41 MuiInput-fullWidth-48 MuiInput-formControl-42 MuiInput-underline-45"
+        >
+            <input
+                aria-invalid={false}
+                aria-required={false}
+                autoComplete={undefined}
+                autoFocus={undefined}
+                className="MuiInput-input-49"
+                defaultValue={undefined}
+                disabled={false}
+                id="email"
+                name="email"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder="Email"
+                readOnly={undefined}
+                required={undefined}
+                rows={undefined}
+                type="text"
+                value=""
+            />
+        </div>
+    </div>
+    <div
+        aria-describedby={undefined}
+        className="MuiFormControl-root-27 MuiFormControl-marginNormal-28 MuiFormControl-fullWidth-30"
+        onBlur={[Function]}
+        onFocus={[Function]}
+    >
+        <label
+            className="MuiFormLabel-root-36 MuiInputLabel-root-31 MuiInputLabel-formControl-32 MuiInputLabel-animated-35 MuiInputLabel-shrink-34"
+            data-shrink={true}
+            htmlFor="confirm-email"
+        >
+            Confirmation Email
+        </label>
+        <div
+            className="MuiInput-root-41 MuiInput-fullWidth-48 MuiInput-formControl-42 MuiInput-underline-45"
+        >
+            <input
+                aria-invalid={false}
+                aria-required={false}
+                autoComplete={undefined}
+                autoFocus={undefined}
+                className="MuiInput-input-49"
+                defaultValue={undefined}
+                disabled={false}
+                id="confirm-email"
+                name="confirmEmail"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder="Confirmation Email"
+                readOnly={undefined}
+                required={undefined}
+                rows={undefined}
+                type="text"
+                value=""
+            />
+        </div>
+    </div>
+    <div
+        className="InviteForm-buttonWrapper-2"
+    >
+        <button
+            className="MuiButtonBase-root-70 MuiButton-root-54 MuiButton-raised-60 MuiButton-raisedPrimary-61 InviteForm-button-1"
+            disabled={false}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="submit"
+        >
+            <span
+                className="MuiButton-label-55"
+            >
+                Submit
+            </span>
+            <span
+                className="MuiTouchRipple-root-73"
+            />
+        </button>
+    </div>
+</form>,
+]
+`;

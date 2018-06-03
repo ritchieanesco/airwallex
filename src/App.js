@@ -21,7 +21,7 @@ const styles = theme => ({
 });
 
 class App extends Component {
-  state = {
+  initialState = {
     open: false,
     success: false,
     fail: false,
@@ -38,6 +38,8 @@ class App extends Component {
     }
   };
 
+  state = this.initialState;
+
   handleSend = () => {
     this.setState({ isSubmitting: !this.state.isSubmitting });
   };
@@ -47,7 +49,15 @@ class App extends Component {
   };
 
   handleClose = () => {
-    this.setState({ open: false });
+    this.setState(this.initialState);
+  };
+
+  handleSuccess = () => {
+    this.setState({ isSubmitting: false, success: true });
+  };
+
+  handleFail = () => {
+    this.setState({ isSubmitting: false, fail: true });
   };
 
   handleInput = (name, value) => {
@@ -56,7 +66,30 @@ class App extends Component {
     this.setState({ fields });
   };
 
-  handleErrors = fields => {
+  handleSubmit = fields => {
+    const errors = this.validateFields(fields);
+    this.setState({ errors }, () => {
+      this.send();
+    });
+  };
+
+  send() {
+    const { name, email, confirmEmail } = this.state.errors;
+    if (name || email || confirmEmail) {
+      return;
+    }
+    this.handleSend();
+    const { name: nameVal, email: emailVal } = this.state.fields;
+    sendForm(nameVal, emailVal)
+      .then(response => {
+        this.handleSuccess();
+      })
+      .catch(error => {
+        this.handleFail();
+      });
+  }
+
+  validateFields = fields => {
     const errors = { ...this.state.errors };
     const { name, email, confirmEmail } = fields;
     errors.name = nameValidation(name);
@@ -66,46 +99,9 @@ class App extends Component {
     return errors;
   };
 
-  handleSubmit = fields => {
-    const errors = this.handleErrors(fields);
-    this.setState({ errors }, () => {
-      const { name, email, confirmEmail } = this.state.errors;
-      if (!name && !email && !confirmEmail) {
-        this.handleSend();
-        this.send();
-      }
-    });
-  };
-
-  send() {
-    const { name, email } = this.state.fields;
-    sendForm(name, email)
-      .then(response => {
-        this.handleSend();
-
-        // this.setState(
-        //   {
-        //     fields: {
-        //       name: "",
-        //       email: "",
-        //       confirmEmail: ""
-        //     }
-        //   },
-        //   () => {
-        //     this.handleClose();
-        //   }
-        // );
-      })
-      .catch(error => {
-        console.log("error", error);
-      });
-  }
-
   render() {
     const { classes } = this.props;
-    const { open, errors, fields, isSubmitting } = this.state;
-    console.log(this.state);
-
+    const { open, errors, fields, isSubmitting, success, fail } = this.state;
     return (
       <Fragment>
         <Header />
@@ -129,12 +125,14 @@ class App extends Component {
         <Footer />
         <InviteModal open={open} onClose={this.handleClose}>
           <InviteForm
-            formRef={item => this.inviteform}
             submitForm={this.handleSubmit}
             inputChange={this.handleInput}
+            closeModal={this.handleClose}
             errors={errors}
             fields={fields}
             isSubmitting={isSubmitting}
+            success={success}
+            fail={fail}
           />
         </InviteModal>
       </Fragment>

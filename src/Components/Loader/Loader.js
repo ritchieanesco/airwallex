@@ -2,6 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import green from "@material-ui/core/colors/green";
+import { object, number } from "prop-types";
 
 const styles = theme => ({
   progress: {
@@ -19,6 +20,11 @@ const Loader = props => {
   return (
     <CircularProgress size={size} className={classes.progress} thickness={7} />
   );
+};
+
+Loader.propTypes = {
+  classes: object,
+  size: number
 };
 
 export default withStyles(styles)(Loader);

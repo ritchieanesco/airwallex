@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import { object } from "prop-types";
 
 const styles = {
   footer: {
@@ -26,6 +27,10 @@ const Footer = props => {
       </Grid>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  classes: object
 };
 
 export default withStyles(styles)(Footer);

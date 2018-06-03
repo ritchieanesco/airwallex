@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
+import { object, node, bool, func } from "prop-types";
 
 const styles = theme => ({
   root: {
@@ -30,6 +31,13 @@ const InviteModal = props => {
       <div className={classes.paper}>{props.children}</div>
     </Modal>
   );
+};
+
+InviteModal.propTypes = {
+  classes: object,
+  children: node,
+  open: bool,
+  onClose: func
 };
 
 export default withStyles(styles)(InviteModal);

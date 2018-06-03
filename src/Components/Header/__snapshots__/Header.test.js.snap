@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly 1`] = `
+<header
+  className="Header-header-1"
+>
+  <div
+    className="MuiGrid-container-4 MuiGrid-spacing-xs-24-27 MuiGrid-justify-xs-center-21"
+  >
+    <div
+      className="MuiGrid-item-5 MuiGrid-grid-xs-11-41 Header-logo-2"
+    >
+      <img
+        alt="logo"
+        height="40"
+        src="logo.svg"
+      />
+      <h2
+        className="MuiTypography-root-95 MuiTypography-title-101 MuiTypography-colorInherit-114 Header-company-3"
+      >
+        Broccoli & Co.
+      </h2>
+    </div>
+  </div>
+</header>
+`;

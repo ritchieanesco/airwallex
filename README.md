@@ -23,7 +23,7 @@ In order to review this code test there are a couple of things you need and some
 
 1.  Run `yarn install`
 2.  Run `yarn start`
-3.  View app in browser `http://localhost:8080`
+3.  View app in browser `http://localhost:3000`
 
 ## Solution Notes
 

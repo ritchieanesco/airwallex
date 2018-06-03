@@ -8,15 +8,17 @@ const styles = theme => ({
     margin: theme.spacing.unit * 2,
     color: green[500],
     position: "absolute",
-    top: -6,
-    left: -6,
+    top: -4,
+    left: 16,
     zIndex: 1
   }
 });
 
 const Loader = props => {
-  const { classes } = props;
-  return <CircularProgress className={classes.progress} thickness={7} />;
+  const { classes, size } = props;
+  return (
+    <CircularProgress size={size} className={classes.progress} thickness={7} />
+  );
 };
 
 export default withStyles(styles)(Loader);

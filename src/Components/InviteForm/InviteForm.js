@@ -3,10 +3,14 @@ import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Text from "../Text/Text";
+import Loader from "../Loader/Loader";
 
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit
+  },
+  buttonWrapper: {
+    position: "relative"
   }
 });
 
@@ -21,8 +25,13 @@ class InviteForm extends Component {
     });
   };
 
+  handleChange = event => {
+    this.props.inputChange(event.currentTarget.name, event.currentTarget.value);
+  };
+
   render() {
-    const { classes, errors } = this.props;
+    const { classes, errors, fields, isSubmitting } = this.props;
+    console.log("fields from form", fields);
     return (
       <Fragment>
         <Text variant="title" id="invite-modal-title">
@@ -40,6 +49,11 @@ class InviteForm extends Component {
             fullWidth
             margin="normal"
             error={errors.name}
+            value={fields.name}
+            onChange={e => this.handleChange(e)}
+            helperText={
+              errors.name && "Name must be at least 3 characters long"
+            }
           />
           <TextField
             id="email"
@@ -52,6 +66,9 @@ class InviteForm extends Component {
             fullWidth
             margin="normal"
             error={errors.email}
+            value={fields.email}
+            onChange={e => this.handleChange(e)}
+            helperText={errors.email && "Email must be a valid format"}
           />
           <TextField
             id="confirm-email"
@@ -64,15 +81,25 @@ class InviteForm extends Component {
             fullWidth
             margin="normal"
             error={errors.confirmEmail}
+            value={fields.confirmEmail}
+            onChange={e => this.handleChange(e)}
+            helperText={
+              errors.confirmEmail && "Confirm email does not match email field"
+            }
           />
-          <Button
-            type="submit"
-            className={classes.button}
-            variant="raised"
-            color="primary"
-          >
-            Submit
-          </Button>
+
+          <div className={classes.buttonWrapper}>
+            {isSubmitting && <Loader size={28} />}
+            <Button
+              type="submit"
+              className={classes.button}
+              variant="raised"
+              color="primary"
+              disabled={isSubmitting}
+            >
+              Submit
+            </Button>
+          </div>
         </form>
       </Fragment>
     );
